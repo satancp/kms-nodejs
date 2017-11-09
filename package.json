@@ -1,0 +1,30 @@
+{
+    "name": "kms-nodejs",
+    "version": "1.0.0",
+    "description": "The nodejs version for the KMS sdk of Qcloud",
+    "main": "index.js",
+    "scripts": {
+        "start": "npm run build",
+        "build": "npm run build-ts",
+        "serve": "nodemon dist/server.js",
+        "watch":
+            "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan.bold,green.bold\" \"npm run watch-ts\" \"npm run serve\"",
+        "build-ts": "tsc"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/satancp/kms-nodejs.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/satancp/kms-nodejs/issues"
+    },
+    "homepage": "https://github.com/satancp/kms-nodejs#readme",
+    "dependencies": {
+        "typescript": "^2.6.1"
+    },
+    "devDependencies": {
+        "@types/node": "^8.0.50"
+    }
+}
